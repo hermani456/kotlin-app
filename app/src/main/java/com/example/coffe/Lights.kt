@@ -45,7 +45,7 @@ fun TurnLightsOnScreen() {
     ) {
         Image(
             painter = painterResource(
-                id = if (isLightOn) R.drawable.ic_launcher_background else R.drawable.ic_launcher_foreground
+                id = if (isLightOn) R.mipmap.lightonicon else R.mipmap.lightoff
             ),
             contentDescription = null,
             modifier = Modifier.size(200.dp)

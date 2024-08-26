@@ -23,6 +23,7 @@ import com.example.coffe.ui.theme.CoffeTheme
 import com.example.coffe.ui.theme.Primary
 
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun App(modifier: Modifier) {
     val selectedRoute = remember {
@@ -57,7 +58,7 @@ fun App(modifier: Modifier) {
         Box(modifier = Modifier.padding(innerPadding)) {
             when(selectedRoute.value){
                 Routes.ConnectionPages.route -> BluetoothScreen()
-                Routes.SwitchPages.route -> Text("switches")
+                Routes.SwitchPages.route -> DeviceControlScreen()
                 Routes.LightsPages.route -> TurnLightsOnScreen()
                 Routes.SensorPages.route -> TemperatureScreen()
             }
@@ -72,7 +73,7 @@ fun AppTitle() {
         contentAlignment = Alignment.Center,
         modifier = Modifier.fillMaxWidth()
     ){
-        Image(painter = painterResource(id = R.drawable.logo), contentDescription = "logo")
+        Image(painter = painterResource(id = R.mipmap.logo_ardroid_icon), contentDescription = "logo")
     }
 }
 
