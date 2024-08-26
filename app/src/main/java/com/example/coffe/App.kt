@@ -33,16 +33,6 @@ fun App(modifier: Modifier) {
         topBar = {
             TopAppBar(
                 title = { AppTitle() },
-//                actions = {
-//                    IconButton(onClick = { /* asd() */ }) {
-//                        Icon(Icons.Filled.Favorite, contentDescription = null)
-//                    }
-//                },
-//                navigationIcon = {
-//                    IconButton(onClick = { /* asd() */ }) {
-//                        Icon(Icons.Filled.Menu, contentDescription = null)
-//                    }
-//                },
                 colors = TopAppBarDefaults.topAppBarColors(Primary)
             )
         },
